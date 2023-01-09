@@ -1,0 +1,250 @@
+@keyframes blur {
+	0% {
+		-webkit-filter: blur(30px);
+		-moz-filter: blur(30px);
+		-o-filter: blur(30px);
+		-ms-filter: blur(30px);
+	}
+
+	100% {
+		-webkit-filter: blur(0);
+		-moz-filter: blur(0);
+		-o-filter: blur(0);
+		-ms-filter: blur(0);
+	}
+}
+
+.loaded {
+	.pb-banner {
+		#thevideo {
+			opacity: 0.3;
+		}
+
+		.bg {
+			filter: blur(0);
+		}
+
+		.vimeo-wrapper {
+			opacity: 1;
+			&.faded {
+				opacity: .7;
+			}
+		}
+	}
+}
+
+.loaded .mod-banner {
+	img {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+body.pt-0 {
+	.pb-banner {
+		padding: 120px 0 60px;
+	}
+	&.topbar:not(.topbar-hidemob) {
+		padding-top: 40px !important;
+	}
+}
+
+.pb-banner {
+	overflow: hidden;
+	position: relative;
+	min-height: 200px;
+	padding: 60px 0;
+	margin-bottom: 20px;
+	h2 {
+		background-color: white;
+		color: black;
+		margin: 0 auto; /* Center the text container */
+		padding: 10px 18px;
+		text-align: center; /* Center text */
+		position: absolute; /* Position text */
+		top: 50%; /* Position text in the middle */
+		left: 50%; /* Position text in the middle */
+		transform: translate(-50%, -50%); /* Position text in the middle */
+		mix-blend-mode: screen; /* This makes the cutout text possible */
+	}
+	mark {
+		padding: 0 !important;
+		background: none !important;
+		color: inherit;
+		display: inline;
+		text-align: left;
+	}
+	
+	&:not(.toon_fullscreen) {	
+		max-height: 750px;
+	}
+	
+	&.toon_md,
+	&.toon_md .bannerslider .item {
+		height: 60vh;
+		height: calc(var(--vh, 1vh) * 60);
+		max-height: 600px;
+	}
+	
+	&.toon_xl,
+	&.toon_xl .bannerslider .item {
+		height: 80vh;
+		height: calc(var(--vh, 1vh) * 80);
+		max-height: 750px;
+	}
+	
+	&.toon_fullscreen, 
+	&.toon_fullscreen .bannerslider .item {
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		max-height: 100vh;
+	}
+	
+	.arrowdown {
+		position: absolute;
+		bottom: 30px;
+		left: calc(50% - 8px);
+		font-size: 20px;
+		color: #fff;
+	}
+	
+	.bannerslider {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		.item {
+			position: relative;
+			
+		}
+	}
+	
+	.btn {
+		margin-bottom: 8px;
+		&:not(:first-child) {
+			margin-left: 8px;
+		}
+	}
+	
+	.sticker {
+		display: block;
+		position: absolute;
+		bottom: 30px;
+		right: 30px;
+		width: 130px;
+		padding: 10px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		height: 130px;
+		border-radius: 300px;
+		z-index: 2;	
+		transform: rotate(15deg);
+		box-shadow: 0px 3px 9px rgba(0,0,0,0.3);
+		&:hover {
+			filter: brightness(130%);
+		}
+	}
+	
+	.vimeo-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		pointer-events: none;
+		overflow: hidden;
+		opacity: 0;
+		transition: .6s opacity cubic-bezier(.19, 1, .22, 1);
+
+		iframe {
+			width: 100vw;
+			height: 56.25vw;
+			/* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+			min-height: 100vh;
+			min-width: 177.77vh;
+			/* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.fill-space {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		background-size: cover;
+		background-position: center center;
+		&.faded {
+			opacity: .5;
+		}
+	}
+	
+	.container {
+		z-index: 1;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.pb-banner {
+		min-height: 260px;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.pb-banner {
+		min-height: 320px;
+		&.toon_md,
+		&.toon_md .bannerslider .item {
+			height: 60vh;
+			height: calc(var(--vh, 1vh) * 60);
+			max-height: 600px;
+		}
+		&.toon_xl,
+		&.toon_xl .bannerslider .item {
+			height: 80vh;
+			height: calc(var(--vh, 1vh) * 80);
+			max-height: 750px;
+		}
+		&.toon_fullscreen,
+		&.toon_fullscreen .bannerslider .item {
+			height: 100vh;
+			height: calc(var(--vh, 1vh) * 100);
+			max-height: 100vh;
+		}
+		.sticker {
+			font-size: 16px;
+			line-height: 22px;
+			bottom: 50px;
+			right: 50px;
+			width: 150px;
+			height: 150px;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	body.pt-0 {
+		.pb-banner {
+			padding: 160px 0 60px;
+		}
+		&.topbar.topbar-hidemob {
+			padding-top: 40px;
+		}
+	}
+	.pb-banner {
+		min-height: 360px;
+	}
+}

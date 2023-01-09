@@ -1,0 +1,16 @@
+a[href] {
+	color: $salmon;
+	&:hover {
+		color: black;
+	}
+	&.btn {
+		background: $dark;
+		color: #fff;
+		width: 100%;
+		text-align: left;
+		padding: 6px 15px;
+		&:hover, &:focus, &:active {
+			background: $dark;
+		}
+	}
+}

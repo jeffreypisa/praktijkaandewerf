@@ -1,0 +1,22 @@
+<header class="header bg-salmon">
+	<div class="container-fluid"> 
+		<div class="row g-2">
+			<div class="col d-flex align-items-center justify-content-center">
+				<a href="{{ site.url }}" class="header-brand">
+					<img class="logo" src="{{ Image(options.logo).src }}" alt="{{ options.logo.alt }}" width="342" height="228">
+				</a>
+			</div>
+		</div>
+		<div class="d-none d-lg-block">
+			{% include "menu.twig" with {'items': menu.get_items} %}
+		</div>
+		<div class="d-lg-none">
+			<a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
+				<i class="fas fa-bars"></i>
+			</a>
+			<div class="collapse" id="collapseMenu">
+				{% include "menu-mobilemenu.twig" with {'items': menu.get_items} %}
+			</div>
+		</div>
+	</div>
+</header>

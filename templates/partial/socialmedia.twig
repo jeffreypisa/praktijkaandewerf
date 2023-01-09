@@ -1,0 +1,32 @@
+<ul class="socialmedia">
+	{% if options.bandcamp %}
+		<li> <a href="{{ options.bandcamp }}" target="_blank" aria-label="Bandcamp"> <i class="fab fa-bandcamp"></i></a></li>
+	{% endif %}
+	{% if options.instagram %}
+		<li> <a href="{{ options.instagram }}" target="_blank" aria-label="Instagram"> <i class="fab fa-instagram"></i> </a> </li>
+	{% endif %}
+	{% if options.itunes %}
+		<li> <a href="{{ options.itunes }}" target="_blank" aria-label="iTunes"> <i class="fab fa-itunes"></i> </a> </li>
+	{% endif %}
+	{% if options.spotify %}
+		<li> <a href="{{ options.spotify }}" target="_blank" aria-label="Spotify"> <i class="fab fa-spotify"></i> </a> </li>
+	{% endif %}
+	{% if options.vimeo %}
+		<li> <a href="{{ options.vimeo }}" target="_blank" aria-label="Vimeo"> <i class="fab fa-vimeo"></i> </a> </li>
+	{% endif %}
+	{% if options.youtube %}
+		<li> <a href="{{ options.youtube }}" target="_blank" aria-label="YouTube"> <i class="fab fa-youtube"></i> </a> </li>
+	{% endif %}
+	{% if options.twitter %}
+		<li> <a href="{{ options.twitter }}" target="_blank" aria-label="Twitter"> <i class="fab fa-twitter-square"></i> </a> </li>
+	{% endif %}
+	{% if options.facebook %}
+		<li> <a href="{{ options.facebook }}" target="_blank" aria-label="Facebook"> <i class="fab fa-facebook-square"></i> </a> </li>
+	{% endif %}
+	{% if options.linkedin %}
+		<li> <a href="{{ options.linkedin }}" target="_blank" aria-label="LinkedIN"> <i class="fab fa-linkedin"></i> </a> </li>
+	{% endif %}
+	{% if options.email %}
+		<li> <a href="mailto:{{ options.email }}" target="_blank" aria-label="Mail"> <i class="fas fa-envelope"></i> </a> </li>
+	{% endif %}
+</ul>

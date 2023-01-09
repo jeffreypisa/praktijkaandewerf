@@ -1,0 +1,45 @@
+{% set sectionno = '0' %}
+
+{% for item in post.get_field('stroken') %}
+
+	{% set sectionno = sectionno + '1' %}
+	
+	{% if item.acf_fc_layout == 'content' %}
+		{% include 'pagebuilder/content.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'blog' %}
+		{% include 'pagebuilder/blog.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'afbeelding' %}
+		{% include 'pagebuilder/afbeelding.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'artikelen' %}
+		{% include 'pagebuilder/artikelen.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'cta' %}
+		{% include 'pagebuilder/cta.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'prijstabel' %}
+		{% include 'pagebuilder/prijstabel.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'accordion' %}
+		{% include 'pagebuilder/accordion.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'video' %}
+		{% include 'pagebuilder/video.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'blokken' %}
+		{% include 'pagebuilder/blokken.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'tegels' %}
+		{% include 'pagebuilder/tegels.twig' %}
+	
+	{% elseif item.acf_fc_layout == 'logos' %}
+		{% include 'pagebuilder/logos.twig' %}
+		
+	{% elseif item.acf_fc_layout == 'prijstabel' %}
+		{% include 'pagebuilder/prijstabel.twig' %}
+	
+	{% endif %}
+  
+{% endfor %}

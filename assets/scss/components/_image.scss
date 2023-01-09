@@ -1,0 +1,16 @@
+.imageblock {
+	height: 250px;
+	background-position: center center;
+}
+
+@include media-breakpoint-up(lg) {
+	.imageblock {
+
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.imageblock {
+		height: 345px;
+	}
+}

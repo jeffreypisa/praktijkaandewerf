@@ -1,0 +1,11 @@
+{% if menu %}
+	<ul class="nav uitklap">
+		{% for item in items %}
+			<li class="nav-item w-100 {{ item.classes | join(' ') }}">
+				<a class="nav-link text-center" target="{{ item.target }}" href="{{ item.link }}">
+					<div>{{ item.title }}</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}

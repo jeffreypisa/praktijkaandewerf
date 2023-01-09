@@ -1,0 +1,33 @@
+.tease[href] {
+	height: auto;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	h3 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-width: 100%;
+	}
+	.afbeelding-wrapper {
+		overflow: hidden;
+		position: relative;
+		.afbeelding {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(1);
+			transition: 7s $ease;
+		}
+	}
+	&[href]:hover {
+		.afbeelding-wrapper {
+			.afbeelding {
+				transform: scale(1.1);
+				transition: 1s $ease;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+		<div class="imageblock bg-cover w-100" style="background-image: url({{ Image(post.thumbnail).src }})"></div>
+		<section>
+			<div class="container-fluid container-lg">
+				{% for row in post.get_field('row') %}
+					<div class="row">
+						{% for col in row.col %}
+							<div class="col-md mb-5 mb-md-0">
+								{% if col.titel %}	
+									<h1 data-mh>{{ col.titel }}</h1>
+								{% endif %}
+								{% if col.tekst %}	
+									{{ col.tekst }}
+								{% endif %}
+								{% if col.link %}	
+									<a href="{{ col.link.url }}" target="{{ col.link.url }}"> {{ col.link.title }}</a>
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	</article>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% if options.menu_hide %}{% else %}
+<div class="mod-mobilemenu">
+	<div class="menucontent w-100">
+		{% include "menu-mobilemenu.twig" with {'items': menu.get_items} %}
+	</div>
+</div>
+{% endif %}

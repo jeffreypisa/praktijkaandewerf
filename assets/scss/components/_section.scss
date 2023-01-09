@@ -1,0 +1,21 @@
+section {
+	padding: 55px 0;
+	position: relative;
+}
+
+.line {
+	height: 3px;
+	background: #000;
+	margin-bottom: 20px;
+}
+
+section.bg-salmon:not(.full-size) + section.bg-salmon:not(.full-size),
+section.bg-transparent:not(.full-size) + section.bg-transparent:not(.full-size),
+section.bg-white:not(.full-size) + section.bg-white:not(.full-size),
+section.bg-dark:not(.full-size) + section.bg-dark:not(.full-size),
+section.bg-brand:not(.full-size) + section.bg-brand:not(.full-size),
+section.bg-action:not(.full-size) + section.bg-action:not(.full-size),
+section.bg-greylight:not(.full-size) + section.bg-greylight:not(.full-size) {
+	padding-top: 0 !important;
+}
+

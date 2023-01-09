@@ -1,0 +1,26 @@
+footer {
+	padding: 30px;
+	position: relative;
+	font-size: 14px;
+	margin-bottom: 0;
+	line-height: 1.3;
+	background: url(../img/footerbg.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	a[href], a[href]:hover {
+		color: #fff;
+	}
+	ul.nav {
+		padding: 0;
+		margin: 0;
+		li {
+			display: block;
+			width: 100%;
+			a {
+				font-size: 0.875em;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
