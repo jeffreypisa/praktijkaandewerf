@@ -1,6 +1,6 @@
 {
   "identifier" : "58CF20D1-20BF-45A6-A08D-48474B0AB56D",
-  "remotePath" : "\/webspace\/httpdocs\/praktijkaandewerf.nl",
+  "remotePath" : "\/webspace\/httpdocs\/praktijkaandewerf.nl\/wp-content\/themes\/praktijkaandewerf",
   "server" : "Praktijk aan de werf",
-  "usesPublishing" : false
+  "usesPublishing" : true
 }
